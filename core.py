@@ -1,3 +1,10 @@
+class File:
+    def __init__(self, path: str, name: str, cid: str) -> None:
+        self.path = path
+        self.name = name
+        self.cid = cid
+
+
 class Attachment:
     def __init__(self, image: list, audio: list, archive: list, videos: list, document: list, other: list) -> None:
         self.image = image

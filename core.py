@@ -16,28 +16,16 @@ class Attachment:
 
 
 class Time:
-    def __init__(self, hour, minute) -> None:
+    def __init__(self, hour: int, minute: int) -> None:
         self.hour = hour
         self.minute = minute
 
 
 class Date:
-    def __init__(self, year, month, day) -> None:
+    def __init__(self, year: int, month: int, day: int) -> None:
         self.year = year
         self.month = month
         self.day = day
-
-
-class Done:
-    def __init__(self, is_finished, user) -> None:
-        self.is_finished = is_finished
-        self.user = user
-
-
-class Taken:
-    def __init__(self, is_taken, user) -> None:
-        self.is_taken = is_taken
-        self.user = user
 
 
 class User:
@@ -49,8 +37,42 @@ class User:
         self.position = position
 
 
+class Taken:
+    def __init__(self, is_taken, user: User) -> None:
+        self.is_taken = is_taken
+        self.user = user
+
+
+class Done:
+    def __init__(self, is_finished: bool, user: User, date: Date, time: Time) -> None:
+        self.is_finished = is_finished
+        self.user = user
+        self.date = date
+        self.time = time
+
+
+class Created:
+    def __int__(self, date, time) -> None:
+        self.date = date
+        self.time = time
+
+
+class Deadline:
+    def __init__(self, date, time):
+        self.date = date
+        self.time = time
+
+
+class Mention:
+    def __init__(self, of: User, to: User, date: Date, time: Time) -> None:
+        self.of = of
+        self.to = to
+        self.date = date
+        self.time = time
+
+
 class Task:
-    def __init__(self, id, name, description, priority, mentions, taken, created, deadline, done, attachment) -> None:
+    def __init__(self, id: int, name: str, description: str, priority: int, mentions: list, taken: Taken, created: Created, deadline: Deadline, done: Done, attachment: Attachment) -> None:
         self.id = id
         self.name = name
         self.description = description

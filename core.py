@@ -86,3 +86,12 @@ class Task:
         self.deadline = deadline
         self.done = done
         self.attachment = attachment
+
+
+class Tools:
+
+    def dict2object(self, dict):
+        for listed_task in dict.get('listed_tasks'):
+            for task in dict.get('listed_tasks').get(listed_task):
+                print(task)
+                #todo: convert a task to a task object

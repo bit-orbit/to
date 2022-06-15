@@ -38,9 +38,11 @@ class User:
 
 
 class Taken:
-    def __init__(self, is_taken, user: User) -> None:
+    def __init__(self, is_taken, user: User, date: Date, time: Time) -> None:
         self.is_taken = is_taken
         self.user = user
+        self.date = date
+        self.time = time
 
 
 class Done:

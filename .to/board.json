@@ -59,12 +59,12 @@
            }
          },
          "attachment": {
-           "image": [],
-           "voice": [],
-           "archive": [],
+           "images": [],
+           "voices": [],
+           "archives": [],
            "videos": [],
-           "document": [],
-           "other": []
+           "documents": [],
+           "others": []
         }
        }
      ]
